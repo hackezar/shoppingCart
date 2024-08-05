@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import Homepage from './components/Homepage/Homepage.jsx'
 import './index.css'
+import './normify.css'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <Homepage />
   </React.StrictMode>,
 )
