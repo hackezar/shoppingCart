@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+}
+
+.cartDiv {
+    height: 40px;
+}

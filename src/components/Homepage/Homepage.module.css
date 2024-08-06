@@ -1,0 +1,73 @@
+.homePageHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.homePageDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reardenLogo {
+    height: 5vh;
+    width: 5vh;
+}
+
+.storePic {
+    height: 30vh;
+    width: 30vh;
+}
+
+
+.displayPic {
+    height: 30vh;
+    width: 60vh;
+}
+
+.displayText {
+    margin: 1rem 0;
+}
+
+.quote {
+    margin: 1rem 0;
+    width: 20rem;
+    font-style: italic;
+    text-wrap: auto;
+}
+
+.section2 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.btnDiv {
+    display: flex;
+    align-items: center;
+}
+
+.shopBtn {
+    height: 5rem;
+    width: 10rem;
+    border-radius: 12px;
+    font-size: 2rem;
+}
+
+.shopBtn:hover {
+    cursor: pointer;
+}
+
+.plug {
+    font-size: 1.2rem;
+    margin: 1rem 2rem;
+    text-align: start;
+    text-shadow:20cap;
+    text-indent: 5%;
+    border: 1px solid black;
+}
