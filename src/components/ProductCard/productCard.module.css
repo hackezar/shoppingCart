@@ -1,0 +1,28 @@
+.productCardDiv {
+    width: 30vh;
+    height: 30vh;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.productCardDiv:hover {
+    cursor: pointer;
+}
+.image {
+    height: 15vh;
+    width: 15vh;
+}
+
+.expand {
+    font-size: 1.5rem;
+}

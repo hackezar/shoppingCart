@@ -3,6 +3,7 @@ import Homepage from '../../components/Homepage/Homepage'
 import ShopPage from '../../components/ShopPage/ShopPage'
 import Footer from '../../components/Footer/Footer'
 import { Route, Routes, Outlet } from "react-router-dom" 
+import { useState } from "react"
 
 const App = () => {
     return (
@@ -16,10 +17,12 @@ const App = () => {
 }
 
 const Layout = () => {
+    const [cartCount, setCartCount] = useState(0);
+    console.log(cartCount)
     return (
         <>
-            <Navbar />
-            <Outlet /> {/* Where Nested Routes will Render */}
+            <Navbar cartCount={cartCount}/>
+            <Outlet context={[cartCount, setCartCount]}/> {/* Where Nested Routes will Render */}
             <Footer />
         </>
     )

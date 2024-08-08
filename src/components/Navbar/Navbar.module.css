@@ -3,13 +3,16 @@
     position: sticky;
     top: 0;
     justify-content: space-between;
-    padding: 0 1rem;
+    align-items: center;
     font-size: 1.5rem;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
+    z-index: 1;
+    height: 5vh;
 }
 
 .links {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -20,4 +23,19 @@
 
 .cartDiv {
     height: 40px;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    gap: 0.5rem;
+}
+
+.cart {
+    font-size: 2rem;
+}
+
+.logo {
+    position: relative;
+    height: 5vh;
+    width: 5vh;
+
 }
