@@ -18,11 +18,12 @@ const App = () => {
 
 const Layout = () => {
     const [cartCount, setCartCount] = useState(0);
-    console.log(cartCount)
+    const [cartContent, setCartContent] = useState([]);
+
     return (
         <>
-            <Navbar cartCount={cartCount}/>
-            <Outlet context={[cartCount, setCartCount]}/> {/* Where Nested Routes will Render */}
+            <Navbar cartCount={cartCount} cartContent={cartContent}/>
+            <Outlet context={[cartCount, setCartCount, cartContent, setCartContent]}/> {/* Where Nested Routes will Render */}
             <Footer />
         </>
     )

@@ -12,7 +12,9 @@ const ShopPage = () => {
     const [products, setProducts] = useState();
     const [productHeading, setProductHeading] = useState('All Products');
     const [expanded, setExpanded] = useState(false)
-    const [cartCount, setCartCount] = useOutletContext();
+    const [cartCount, setCartCount, cartContent, setCartContent] = useOutletContext();
+
+    console.log(cartContent);
     // Fetch all available products on initial render
     useEffect(() => {
         async function fetch() {
@@ -31,9 +33,9 @@ const ShopPage = () => {
         setExpanded(false);
     }
 
-    const addToCart = () => {
+    const addToCart = (product) => {
         setCartCount(cartCount => cartCount + 1);
-        console.log('btn Clicked');
+        setCartContent([...cartContent, product]);
     }
 
     return (
@@ -47,7 +49,7 @@ const ShopPage = () => {
             </>
             :
             <>
-                <ExpandedProductCard product={expanded[0]} handleClick={() => minimizeProduct()} addToCart={() => addToCart()}/>
+                <ExpandedProductCard product={expanded[0]} handleClick={() => minimizeProduct()} addToCart={() => addToCart(expanded[0])}/>
             </>
             }
         </div>
