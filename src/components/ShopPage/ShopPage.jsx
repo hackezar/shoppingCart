@@ -35,7 +35,23 @@ const ShopPage = () => {
 
     const addToCart = (product) => {
         setCartCount(cartCount => cartCount + 1);
-        setCartContent([...cartContent, product]);
+        // Check if the cart already has the added product
+        const filteredCart = cartContent.filter((item) => item.id === product.id)
+        // Add item to cart if it has not yet been added to cart
+        if (filteredCart.length === 0) {
+            product.quantity = 1;
+            setCartContent([...cartContent, product]);
+        // otherwise update the quantity of the item by one
+        } else {
+            const newCart = cartContent.map((item) => {
+                if (item.quantity) {
+                    item.quantity++;
+                    return item
+                } else
+                    return item;
+            })
+            setCartContent(newCart)
+        }
     }
 
     return (

@@ -20,9 +20,20 @@ const Layout = () => {
     const [cartCount, setCartCount] = useState(0);
     const [cartContent, setCartContent] = useState([]);
 
+    const updateItemQuantity = (value, id) => {
+        const newCart = cartContent.map((item) => {
+            if (item.id === id) {
+                item.quantity = value;
+                return item;
+            } else
+                return item;
+        })
+        setCartContent(newCart);
+    }
+
     return (
         <>
-            <Navbar cartCount={cartCount} cartContent={cartContent}/>
+            <Navbar cartCount={cartCount} cartContent={cartContent} updateItemQuantity={updateItemQuantity}/>
             <Outlet context={[cartCount, setCartCount, cartContent, setCartContent]}/> {/* Where Nested Routes will Render */}
             <Footer />
         </>
