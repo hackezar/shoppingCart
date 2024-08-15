@@ -6,9 +6,56 @@
     background-color: white;
     display: flex;
     flex-direction: column;
+    width: 25vw;
+    height: 30vh;
+    overflow: scroll;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header > p {
+    margin: 0;
+}
+
+.closeIcon {
+    font-size: 2rem;
+}
+
+.productsDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .product {
     display: flex;
-    flex-direction: row;
+    text-wrap: balance;
+    align-items: center;
+}
+
+.productTitle {
+    font-size: 1rem;
+}
+
+.productPrice {
+    font-size: 1rem;
+    display: flex;
+}
+
+.totalDiv {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    font-size: 1rem;
+    padding: 0.4rem;
+    background-color: whitesmoke;
+}
+
+.deleteIcon {
+    font-size: 2rem;
 }

@@ -16,7 +16,6 @@ const ProductCard = ({product, handleClick}) => {
             <div className={styles.productTitle}>{newTitle}</div>
             <div className={styles.imageDiv}><img src={product.image} className={styles.image} alt='picture of product' /></div>
             <div className={styles.price}>${product.price}</div>
-            {/*<div className={styles.description}>{product.description}</div>*/}
         </div>
     )
 }

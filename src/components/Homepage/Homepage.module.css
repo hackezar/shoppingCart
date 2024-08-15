@@ -8,7 +8,9 @@
 .homePageDiv {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    flex-grow: 1;
 }
 
 .reardenLogo {
@@ -23,8 +25,8 @@
 
 
 .displayPic {
-    height: 30vh;
-    width: 60vh;
+    height: 30vw;
+    width: 60vw;
 }
 
 .displayText {
@@ -33,7 +35,7 @@
 
 .quote {
     margin: 1rem 0;
-    width: 20rem;
+    width: 50vw;
     font-style: italic;
     text-wrap: auto;
 }
@@ -53,10 +55,23 @@
 }
 
 .shopBtn {
-    height: 5rem;
-    width: 10rem;
+    height: 5vw;
+    width: 10vw;
     border-radius: 12px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+    min-width: 80px;
+}
+
+.title {
     font-size: 2rem;
+}
+
+.shopBtn:hover {
+    border:1px solid black;
 }
 
 .shopBtn:hover {

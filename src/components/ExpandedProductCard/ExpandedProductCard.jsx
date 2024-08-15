@@ -2,10 +2,11 @@
 import styles from './ExpandedProductCard.module.css';
 
 const ExpandedProductCard = ({product, handleClick, addToCart}) => {
+
     return(
         <div className={styles.productCardDiv} key={product.id}>
             <span className={`material-symbols-outlined ${styles.closeIcon}`} onClick={handleClick}>close</span>
-            <div className={styles.productTitle}>{product.title}</div>
+            <h6 className={styles.productTitle}>{product.title}</h6>
             <div className={styles.imageDiv}><img src={product.image} className={styles.image} alt='picture of product' /></div>
             <div className={styles.description}>
                 <div className={styles.descriptionTitle}>

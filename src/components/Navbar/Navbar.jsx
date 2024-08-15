@@ -1,16 +1,21 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import {  useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import Logo from "../../assets/Rearden Digital Logo AI.webp"
 import Checkout from "../Checkout/Checkout";
 
-const Navbar = ({cartCount, cartContent, updateItemQuantity}) => {
+const Navbar = ({cartCount,
+                 cartContent, 
+                 updateItemQuantity, 
+                 deleteCartContent, 
+                 submitCheckout, 
+                 loading}) => {
     const [checkoutActive, setCheckoutActive] = useState(false)
-
     const toggleCheckout = () => {
         setCheckoutActive(!checkoutActive)
     }
+
 
     console.log(checkoutActive);
     return (
@@ -24,7 +29,13 @@ const Navbar = ({cartCount, cartContent, updateItemQuantity}) => {
                 <span className={`material-symbols-outlined ${styles.cart}`} onClick={() => toggleCheckout()}>shopping_cart</span>
                 <div className={styles.cartCount}>{cartCount}</div>
             </div>
-            {checkoutActive && <Checkout handleClose={() => toggleCheckout()} cartContent={cartContent} updateItemQuantity={updateItemQuantity}/>}
+            {checkoutActive && <Checkout handleClose={() => toggleCheckout()} 
+                                cartContent={cartContent} 
+                                updateItemQuantity={updateItemQuantity}
+                                deleteCartContent={deleteCartContent}
+                                submitCheckout={submitCheckout} 
+                                loading={loading}/>
+            }
         </div>
     )
 }

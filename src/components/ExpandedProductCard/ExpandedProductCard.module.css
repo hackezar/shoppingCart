@@ -82,3 +82,25 @@
 .addCartBtn:hover {
     cursor: pointer;
 }
+
+@media screen and (max-width: 850px) {
+    .productTitle {
+        font-size: 1.3rem;
+    }
+
+    .imageDiv {
+        margin: 1rem 0;
+    }
+
+    .productCardDiv {
+        height: auto;
+    }
+
+    .description {
+        margin-bottom: 1rem;
+    }
+
+    .buttonsDiv {
+        margin: 1rem 0;
+    }
+}
